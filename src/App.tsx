@@ -6,7 +6,7 @@ function App() {
     <>
       <div className="fixed inset-0 w-screen h-screen">
         <img
-          src="https://media.discordapp.net/attachments/1189617558257664110/1358894330999210164/image.png?ex=68813f77&is=687fedf7&hm=01cb7a89053590beec28385637b03deef85a1c1e36ebb3c94fe3a662bf3af684&=&format=webp&quality=lossless&width=1522&height=856"
+          src="https://media.discordapp.net/attachments/1394709878697758740/1397376959692144720/image.png?ex=68818035&is=68802eb5&hm=9d6be3c4a96087c80346f16eb6fbea2b39e5b04e572e13c815b9e8a1722b09fb&=&format=webp&quality=lossless&width=1522&height=856"
           alt="bg"
           className="w-full h-full object-cover"
         />
