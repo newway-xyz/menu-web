@@ -20,7 +20,7 @@ Interface web para o menu do NewWay Pro, um sistema de mod menu para GTA V.
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/menu-web.git
+git clone https://github.com/newway-xyz/menu-web.git
 cd menu-web
 
 # Instale as dependências
@@ -46,7 +46,7 @@ npm run preview
 
 1. Faça push das mudanças para a branch `main`
 2. O GitHub Actions irá automaticamente fazer o build e deploy
-3. Acesse: `https://seu-usuario.github.io/menu-web/`
+3. Acesse: `https://newway-xyz.github.io/menu-web/`
 
 ### Método 2: Manual
 
@@ -100,3 +100,9 @@ Este projeto é privado e proprietário.
 3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
+
+## 🔗 Links
+
+- **Repositório**: https://github.com/newway-xyz/menu-web
+- **Site**: https://newway-xyz.github.io/menu-web/
+- **Issues**: https://github.com/newway-xyz/menu-web/issues
