@@ -2,16 +2,11 @@ import { useState, useMemo } from "react"
 import { Header } from "./Header"
 import { Breadcrumbs } from "./Breadcrumbs"
 import { CategorySidebar } from "./CategorySidebar"
-import { VehicleExplorer } from "./VehicleExplorer"
-import { VehicleDetails } from "./VehicleDetails"
+import { DynamicContent } from "./DynamicContent"
 import { generateBreadcrumbs } from "../utils/breadcrumbs"
 
 export function Menu() {
-    const [selectedCategory, setSelectedCategory] = useState("vehicle")
-    const [viewMode, setViewMode] = useState("grid")
-    const [spawnInside, setSpawnInside] = useState(true)
-    const [maxUpgrades, setMaxUpgrades] = useState(true)
-    const [customPlate, setCustomPlate] = useState(false)
+    const [selectedCategory, setSelectedCategory] = useState("vehicles_vehicle")
 
     // Gerar breadcrumbs baseados na categoria selecionada
     const breadcrumbItems = useMemo(() => {
@@ -29,20 +24,7 @@ export function Menu() {
                     onCategorySelect={setSelectedCategory}
                 />
 
-                <VehicleExplorer
-                    viewMode={viewMode}
-                    onViewModeChange={setViewMode}
-                />
-
-                <VehicleDetails
-                    vehicleName="Grotti Brioso"
-                    spawnInside={spawnInside}
-                    maxUpgrades={maxUpgrades}
-                    customPlate={customPlate}
-                    onSpawnInsideChange={setSpawnInside}
-                    onMaxUpgradesChange={setMaxUpgrades}
-                    onCustomPlateChange={setCustomPlate}
-                />
+                <DynamicContent selectedCategory={selectedCategory} />
             </div>
         </div>
     )
