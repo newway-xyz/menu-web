@@ -1,69 +1,102 @@
-# React + TypeScript + Vite
+# Menu Web - NewWay Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web para o menu do NewWay Pro, um sistema de mod menu para GTA V.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Navegação por Categorias**: Self, Teleport, Vehicles, Network, World, Recovery, Settings
+- **Interface Dinâmica**: Conteúdo que muda baseado na categoria selecionada
+- **Breadcrumbs Inteligentes**: Navegação contextual
+- **Design Responsivo**: Interface moderna e adaptável
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **Vite** - Build tool e dev server
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/menu-web.git
+cd menu-web
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Instale as dependências
+npm install
+
+# Execute em modo desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏗️ Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Build para produção
+npm run build
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview do build
+npm run preview
 ```
+
+## 🌐 Deploy no GitHub Pages
+
+### Método 1: Automático (Recomendado)
+
+1. Faça push das mudanças para a branch `main`
+2. O GitHub Actions irá automaticamente fazer o build e deploy
+3. Acesse: `https://seu-usuario.github.io/menu-web/`
+
+### Método 2: Manual
+
+```bash
+# Deploy manual
+npm run deploy
+```
+
+### Configuração do GitHub Pages
+
+1. Vá para Settings > Pages no seu repositório
+2. Source: Deploy from a branch
+3. Branch: `gh-pages`
+4. Folder: `/ (root)`
+5. Save
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── content/          # Componentes de conteúdo por categoria
+│   ├── Menu.tsx          # Componente principal
+│   ├── DynamicContent.tsx # Roteamento dinâmico
+│   └── ...
+├── data/
+│   └── categories.ts     # Dados das categorias
+├── utils/
+│   ├── breadcrumbs.ts    # Geração de breadcrumbs
+│   └── categoryUtils.ts  # Utilitários de categoria
+└── ...
+```
+
+## 🔧 Configuração
+
+### Base Path
+
+O projeto está configurado para rodar em `/menu-web/`. Se você mudar o nome do repositório, atualize:
+
+1. `vite.config.ts` - linha `base: "/novo-nome/"`
+2. `package.json` - script deploy
+
+## 📝 Licença
+
+Este projeto é privado e proprietário.
+
+## 🤝 Contribuição
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
