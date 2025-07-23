@@ -106,3 +106,4 @@ Este projeto é privado e proprietário.
 - **Repositório**: https://github.com/newway-xyz/menu-web
 - **Site**: https://newway-xyz.github.io/menu-web/
 - **Issues**: https://github.com/newway-xyz/menu-web/issues
+# Trigger GitHub Actions
